@@ -1,19 +1,22 @@
-# wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-# sudo dpkg -i packages-microsoft-prod.deb
+# Microsoft Dotnet
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
 
-# sudo add-apt-repository universe
-# sudo apt-get install apt-transport-https
-# sudo apt-get update
-# sudo apt-get install dotnet-sdk-2.2
+sudo add-apt-repository universe
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.2
 
-# curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-# sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+# Azure Function Core Tools
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 
-# sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
-# sudo apt-get update
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
+sudo apt-get update
 
-# sudo apt-get install azure-functions-core-tools
+sudo apt-get install azure-functions-core-tools
 
+# Azure CLI
 sudo apt-get install apt-transport-https lsb-release software-properties-common dirmngr -y
 
 AZ_REPO=$(lsb_release -cs)
