@@ -7,6 +7,10 @@ Scripts to set up Azure GPU VM that install all prerequisites for latest Tensorf
 - pip
 - virtualenv
 
+Optional:
+- Docker CE
+- nvidia-docker 2.0
+
 Instructions
 ---
 In `azure-vm-setup`, run:
@@ -22,4 +26,12 @@ Run `virtualenv --help` to check if virtualenv is there.
 
 **STOP HERE. DO NOT PIP INSTALL ANYTHING ELSE**
 
-Source: https://www.tensorflow.org/install/gpu#ubuntu_1804_cuda_10
+Extra: NVIDIA-Docker
+---
+Run `bash docker.sh` to install Docker CE
+
+Run `bash nvidia_docker.sh` to install Nvidia-Docker
+
+Source: 
+- https://www.tensorflow.org/install/gpu#ubuntu_1804_cuda_10
+- https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)
