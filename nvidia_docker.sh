@@ -12,3 +12,7 @@ sudo pkill -SIGHUP dockerd
 
 # Test nvidia-smi with the latest official CUDA image
 sudo docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+
+# Pull Tensorflow-Serving
+sudo docker pull tensorflow/serving:latest-gpu
+
