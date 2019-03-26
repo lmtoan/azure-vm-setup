@@ -56,7 +56,7 @@ Jupyter Notebook Setup
 ```
 c = get_config()
 
-# You must give the path to the certificate file.
+# OPTIONAL: Give the path to the certificate file.
 c.NotebookApp.certfile = u'/home/your-user-name/.jupyter/mycert.pem'
 
 # Create your own password as indicated above
