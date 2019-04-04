@@ -1,8 +1,0 @@
-tensorflow-gpu
-tensor2tensor
-tensorflow-serving-api-gpu
-tensorflow-hub
-flask_cors
-jieba
-nltk
-sacrebleu

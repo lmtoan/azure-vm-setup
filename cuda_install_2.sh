@@ -14,6 +14,7 @@ sudo apt-get update && \
 # Install pip, virtualenv
 sudo apt install python-pip
 sudo apt install virtualenv
+sudo apt-get install tree
 
 # Reboot
 sudo reboot
