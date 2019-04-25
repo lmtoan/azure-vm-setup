@@ -26,12 +26,18 @@ Run `virtualenv --help` to check if virtualenv is there.
 
 **STOP HERE. DO NOT PIP INSTALL ANYTHING ELSE**
 
+Attach a Disk
+---
+- Follow this [instruction](https://devopscube.com/mount-ebs-volume-ec2-instance/) for AWS-EC2
+- Follow this [instruction](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal#connect-to-the-linux-vm-to-mount-the-new-disk) for Azure
+
 Virtual Environment Setup
 ---
 Steps:
 - `mkdir /datadrive/envs`
-- `virtualenv --python=python3.6 /datadrive/envs/<your_env_name> --system-site-packages`. 
-	- This command will create a Python 3 virtual environment that inherits all the base packages that are pre-installed in the VM. The virtual environment is stored on /datadrive/envs directory to save OS disk space.
+- `virtualenv --python=python3.6 /datadrive/envs/<your_env_name>`. 
+	- Default to empty Python 3 environment, check in `/usr/bin` for which Python versions are available. The virtual environment is stored on /datadrive/envs directory to save OS disk space.
+	- Add ` --system-site-packages` to inherit all the base packages that are pre-installed in the VM, however not recommended. 
 - To activate your environment, do `source /datadrive/envs/<your_env_name>/bin/activate`
 	- If fancy, add this line to `.bashrc` : `alias <your_env_name>='source /datadrive/envs/<your_env_name>/bin/activate'`. Then `source ~/.bashrc` to take effect
 	- After that, only run `your-env-name` to activate the environment and begin work
@@ -56,9 +62,6 @@ Jupyter Notebook Setup
 ```
 c = get_config()
 
-# OPTIONAL: Give the path to the certificate file.
-c.NotebookApp.certfile = u'/home/your-user-name/.jupyter/mycert.pem'
-
 # Create your own password as indicated above
 c.NotebookApp.password = u'your-sha1-password'
 
@@ -74,7 +77,6 @@ Docker Setup
 Inside `azure-vm-setup` directory:
 - Run `bash docker.sh` to install Docker CE
 - Run `bash nvidia_docker.sh` to install Nvidia-Docker
-
 
 Source: 
 - https://www.tensorflow.org/install/gpu#ubuntu_1804_cuda_10
