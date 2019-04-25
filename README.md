@@ -11,6 +11,8 @@ Optional:
 - Docker CE
 - nvidia-docker 2.0
 
+These scripts are not needed for EC2-AWS using the [Deep Learning Base AMI](https://aws.amazon.com/marketplace/pp/B077GCZ4GR), however instructions for virtual environment and Docker might still be helpful.
+
 Instructions
 ---
 In `azure-vm-setup`, run:
