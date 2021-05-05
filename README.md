@@ -16,9 +16,9 @@ These scripts are not needed for EC2-AWS using the [Deep Learning Base AMI](http
 Instructions
 ---
 In `azure-vm-setup`, run:
-- `bash cuda_setup_part1.sh` to install NVIDIA drivers. This will take about 10 minutes and there will be a reboot.
+- `bash cuda_install_1.sh` to install NVIDIA drivers. This will take about 10 minutes and there will be a reboot.
 - Login to the VM again and run `nvidia-smi` to make sure CUDA driver is installed
-- `bash cuda_setup_part2.sh` to install CU-DNN. This will take about 20 minutes and there will be a reboot.
+- `bash cuda_install_2.sh` to install CU-DNN. This will take about 20 minutes and there will be a reboot.
 - Login to the VM again and run `nvcc --version`. Should show up as CUDA 10.1.
 - Run `bash test_cuda.sh` to run CUDNN tests. Should show up as successful.
 
